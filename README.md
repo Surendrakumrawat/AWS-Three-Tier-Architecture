@@ -235,191 +235,80 @@ AWS Three-Tier Architecture Project
 
 # 📸 Project Screenshots
 
-## 1. Production VPC Created
+## 1. Production VPC
 
 ![Production VPC](Screenshots/01-production-vpc-created.png)
 
 ---
 
-## 2. Public Web Subnet AZ1
+## 2. Public & Private Subnets
 
-![Public Web Subnet AZ1](Screenshots/02-public-web-subnet-az1-created.png)
+![Public Web Subnet](Screenshots/02-public-web-subnet-az1-created.png)
 
----
-
-## 3. Public Web Subnet AZ2
-
-![Public Web Subnet AZ2](Screenshots/03-public-web-subnet-az2-created.png)
+![Private App Subnet](Screenshots/04-private-app-subnet-az1-created.png)
 
 ---
 
-## 4. Private App Subnet AZ1
-
-![Private App Subnet AZ1](Screenshots/04-private-app-subnet-az1-created.png)
-
----
-
-## 5. Private App Subnet AZ2
-
-![Private App Subnet AZ2](Screenshots/05-private-app-subnet-az2-created.png)
-
----
-
-## 6. Private DB Subnet AZ1
-
-![Private DB Subnet AZ1](Screenshots/06-private-db-subnet-az1-created.png)
-
----
-
-## 7. Private DB Subnet AZ2
-
-![Private DB Subnet AZ2](Screenshots/07-private-db-subnet-az2-created.png)
-
----
-
-## 8. Internet Gateway Attached
+## 3. Internet Gateway
 
 ![Internet Gateway](Screenshots/08-production-igw-attached.png)
 
 ---
 
-## 9. NAT Gateway Created
+## 4. NAT Gateway
 
 ![NAT Gateway](Screenshots/09-production-nat-gateway-created.png)
 
 ---
 
-## 10. Public Route Table
+## 5. Route Table Configuration
 
-![Public Route Table](Screenshots/10-public-route-table-created.png)
-
----
-
-## 11. Public Route Added
-
-![Public Route](Screenshots/11-public-route-added.png)
+![Route Table](Screenshots/13-private-route-table-created.png)
 
 ---
 
-## 12. Public Subnet Associated
+## 6. Security Groups
 
-![Public Subnet Association](Screenshots/12-public-subnet-associated.png)
-
----
-
-## 13. Private Route Table
-
-![Private Route Table](Screenshots/13-private-route-table-created.png)
+![Security Groups](Screenshots/16-web-alb-security-group-created.png)
 
 ---
 
-## 14. Private Route Added
-
-![Private Route](Screenshots/14-private-route-added.png)
-
----
-
-## 15. Private Subnets Associated
-
-![Private Subnets](Screenshots/15-private-subnets-associated.png)
-
----
-
-## 16. Web ALB Security Group
-
-![Web Security Group](Screenshots/16-web-alb-security-group-created.png)
-
----
-
-## 17. Application Server Security Group
-
-![Application Security Group](Screenshots/17-app-server-security-group-created.png)
-
----
-
-## 18. Database Security Group
-
-![Database Security Group](Screenshots/18-database-security-group-created.png)
-
----
-
-## 19. DB Subnet Group
-
-![DB Subnet Group](Screenshots/19-db-subnet-group-created.png)
-
----
-
-## 20. Amazon RDS Available
+## 7. Amazon RDS
 
 ![Amazon RDS](Screenshots/20-rds-database-available.png)
 
 ---
 
-## 21. EC2 Launch Configuration
+## 8. EC2 Application Server
 
-![EC2 Launch](Screenshots/21-app-server-launch-configuration.png)
-
----
-
-## 22. User Data Configuration
-
-![User Data](Screenshots/22-app-server-user-data.png)
+![EC2](Screenshots/23-app-server-running.png)
 
 ---
 
-## 23. EC2 Running
+## 9. Target Group
 
-![EC2 Running](Screenshots/23-app-server-running.png)
-
----
-
-## 24. Target Group Configuration
-
-![Target Group](Screenshots/24-target-group-configuration.png)
+![Target Group](Screenshots/25-target-group-created.png)
 
 ---
 
-## 25. Target Group Created
+## 10. Application Load Balancer
 
-![Target Group Created](Screenshots/25-target-group-created.png)
-
----
-
-## 26. ALB Basic Configuration
-
-![ALB Configuration](Screenshots/26-alb-basic-configuration.png)
+![Application Load Balancer](Screenshots/29-alb-active.png)
 
 ---
 
-## 27. ALB Network Mapping
+## 11. Healthy Targets
 
-![ALB Network](Screenshots/27-alb-network-mapping.png)
-
----
-
-## 28. ALB Listener & Routing
-
-![ALB Listener](Screenshots/28-alb-listener-routing.png)
+![Healthy Targets](Screenshots/30-target-group-healthy.png)
 
 ---
 
-## 29. Application Load Balancer Active
+## 12. Final Output
 
-![ALB Active](Screenshots/29-alb-active.png)
-
----
-
-## 30. Target Group Healthy
-
-![Target Healthy](Screenshots/30-target-group-healthy.png)
+![Application](Screenshots/31-application-loaded-through-alb.png)
 
 ---
 
-## 31. Application Successfully Running
-
-![Application Running](Screenshots/31-application-loaded-through-alb.png)
-
----
 
 # 💻 Commands Used
 
@@ -547,127 +436,3 @@ AWS Cloud | Git & GitHub | Linux | Networking | Cloud Projects
 
 ⭐ If you found this project useful, consider giving this repository a **Star**.
 
-
-
-
-
-
-
-
-
-
-# AWS Three-Tier Architecture
-
-## Project Overview
-
-This project demonstrates a highly available and secure Three-Tier Architecture on AWS using Amazon VPC, EC2, Application Load Balancer (ALB), NAT Gateway, Internet Gateway, Route Tables, Security Groups, and Amazon RDS MySQL.
-
-The architecture follows AWS best practices by separating the Web, Application, and Database layers into different subnets to improve security, scalability, and availability.
-
----
-
-## Architecture
-
-See the complete architecture diagram below.
-
-👉 **Architecture/architecture.md**
-
----
-
-## AWS Services Used
-
-- Amazon VPC
-- Public & Private Subnets
-- Internet Gateway
-- NAT Gateway
-- Route Tables
-- Security Groups
-- Amazon EC2
-- Application Load Balancer
-- Target Group
-- Amazon RDS MySQL
-
----
-
-## Project Architecture
-
-```
-User
-   │
-   ▼
-Application Load Balancer
-   │
-   ▼
-Application Server (EC2)
-   │
-   ▼
-Amazon RDS (MySQL)
-```
-
----
-
-## Project Structure
-
-```
-AWS-Three-Tier-Architecture
-│
-├── Architecture
-│   ├── architecture.md
-│   └── architecture-diagram.png
-│
-├── Commands
-│   └── commands.md
-│
-├── Website
-│   └── index.html
-│
-├── Screenshots
-│   ├── 01-production-vpc-created.png
-│   ├── ...
-│   └── 31-application-loaded-through-alb.png
-│
-└── README.md
-```
-
----
-
-## Implementation Steps
-
-- Created Production VPC
-- Created Public and Private Subnets
-- Configured Internet Gateway
-- Configured NAT Gateway
-- Created Route Tables
-- Configured Security Groups
-- Created DB Subnet Group
-- Launched Amazon RDS MySQL
-- Launched EC2 Application Server
-- Configured Apache Web Server
-- Created Target Group
-- Created Application Load Balancer
-- Verified Target Health
-- Tested Application through ALB
-
----
-
-## Screenshots
-
-The **Screenshots** folder contains the complete implementation from VPC creation to successful application deployment.
-
-Total Screenshots: **31**
-
----
-
-## Result
-
-The application was successfully deployed using a secure AWS Three-Tier Architecture.
-
-The Application Load Balancer successfully routed user requests to the EC2 Application Server, which communicated securely with Amazon RDS inside private subnets.
-
----
-
-## Author
-
-**Surendra Kumrawat**
-
-AWS Cloud | GitHub Portfolio
